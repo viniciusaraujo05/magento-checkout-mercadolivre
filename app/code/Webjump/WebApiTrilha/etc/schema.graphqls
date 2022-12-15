@@ -1,0 +1,13 @@
+type Query {
+    insertPet(Input: PetInput): PetOutput
+    @resolver(class: "\\Webjump\\WebApiTrilha\\Model\\Resolver\\InsertPet")
+}
+
+input PetInput {
+    name: String
+    description: String
+}
+
+type PetOutput {
+    result: String
+}
